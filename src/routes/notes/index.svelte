@@ -25,8 +25,6 @@
 			}); // parses JSON response into native Javascript objects 
 	}
 
-	var updateTimeout;
-
 	function fetchNotes() {
 		fetch(`notes.json`)
 			.then(r => r.json())
@@ -42,6 +40,8 @@
 				notes = n;
 			});		
 	}
+
+	var updateTimeout;
 
 	function updateNote(e) {
 		clearTimeout(updateTimeout);
@@ -82,9 +82,9 @@
 
 <svelte:head>
 	<title>Notes</title>
-  <meta name="description" content="Sample notes application">
-  <meta name="keywords" content="notes,javascript,sample">
-  <meta name="author" content="Daniel Persson">
+	<meta name="description" content="Sample notes application">
+	<meta name="keywords" content="notes,javascript,sample">
+	<meta name="author" content="Daniel Persson">
 	<script src="//cdn.muicss.com/mui-0.9.41/js/mui.min.js" defer></script>    
 </svelte:head>
 

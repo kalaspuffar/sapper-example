@@ -24,7 +24,7 @@ export function post(req, res) {
 	var result = db.get('notes')
 		.push({ id: uuid(), text: req.body.text })
 		.value();
-	db.write()
+	db.write();
 
 	res.end(JSON.stringify(result));
 }
